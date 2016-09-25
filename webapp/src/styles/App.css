@@ -613,7 +613,7 @@ body.container {
     border-left: 1px solid #cbd5dd;
     border-right: 1px solid #cbd5dd;
   }
-  .app,
+  .index,
   .app body {
     height: 100%;
     overflow: hidden;
