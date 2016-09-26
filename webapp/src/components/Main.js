@@ -10,50 +10,57 @@ require('styles/App.css');
 import React from 'react';
 import Header from './Header';
 import Aside from './Aside';
-import Content from './Content';
-
 class AppComponent extends React.Component {
-  //定义场景初始状态
-  constructor(props){
-    super(props);
-    this.state = {
-        navbarIsVisible: true   //左侧导航栏是否显示
+    //定义场景初始状态
+    constructor(props) {
+        super(props);
+        this.state = {
+            navbarIsVisible: true   //左侧导航栏是否显示
 
+        }
     }
-  }
-  /*
-   * 更改左侧导航栏状态
-   * @param index 输入当前被执行 inverse 操作的图片对应的图片信息数组的index 值
-   * @return {Function} 这是一个比闭包函数， 其内return一个真正待被执行的函数
-   */
-  changeNavbar(){
-    return function () {
-      let setNavbarIsVisible = !this.state.navbarIsVisible;
 
-      this.setState({
-        navbarIsVisible: setNavbarIsVisible
-      });
-    }.bind(this);
-  }
-  render() {
-    return (
-    <section className="vbox">
-        <Header navbarState={this.state.navbarIsVisible} changeNavbar={this.changeNavbar()}/>
-        <section>
-            <section className="hbox stretch">
+    /*
+     * 更改左侧导航栏状态
+     * @param index 输入当前被执行 inverse 操作的图片对应的图片信息数组的index 值
+     * @return {Function} 这是一个比闭包函数， 其内return一个真正待被执行的函数
+     */
+    changeNavbar() {
+        return function () {
+            let setNavbarIsVisible = !this.state.navbarIsVisible;
 
-                <Aside navbarState={this.state.navbarIsVisible}/>
+            this.setState({
+                navbarIsVisible: setNavbarIsVisible
+            });
+        }.bind(this);
+    }
 
-                <Content />
+    render() {
+        return (
+            <section className="vbox">
+                <Header navbarState={this.state.navbarIsVisible} changeNavbar={this.changeNavbar()}/>
+                <section>
+                    <section className="hbox stretch">
 
+                        <Aside navbarState={this.state.navbarIsVisible}/>
+                        <section id="content">
+                            <section className="vbox">
+                                <section className="scrollable wrapper w-f bg-white-only">
+                                    {this.props.children && React.cloneElement(this.props.children, {source:'https://api.github.com/users/octocat/gists'})}
+                                </section>
+                                <footer className="footer bg-light">
+                                    <p>This is a footer</p>
+                                </footer>
+                            </section>
+                        </section>
+
+                    </section>
+                </section>
             </section>
-        </section>
-    </section>
-);
-  }
+        );
+    }
 }
 
-AppComponent.defaultProps = {
-};
+AppComponent.defaultProps = {};
 
 export default AppComponent;

@@ -3,6 +3,7 @@ html {
   overflow-x: hidden;
 }
 body {
+  cursor: default;
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #788188;
@@ -2288,6 +2289,10 @@ fieldset[disabled] .btn-dark.active {
   color: #fff;
   background-color: #6068b3;
 }
+.bg-primary .nav > li > .active {
+  color: #fff;
+  background-color: #6068b3;
+}
 .bg-primary .nav > li > a {
   color: #ebecf5;
 }
@@ -2296,7 +2301,7 @@ fieldset[disabled] .btn-dark.active {
   background-color: #6068b3;
 }
 .bg-primary .nav .open > a {
-  background-color: #6068b3;
+  /*background-color: #6068b3;*/
 }
 .bg-primary .caret {
   border-top-color: #dadcec;
