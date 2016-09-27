@@ -41,7 +41,6 @@ class AppComponent extends React.Component {
                 <Header navbarState={this.state.navbarIsVisible} changeNavbar={this.changeNavbar()}/>
                 <section>
                     <section className="hbox stretch">
-
                         <Aside navbarState={this.state.navbarIsVisible}/>
                         <section id="content">
                             <section className="vbox">
