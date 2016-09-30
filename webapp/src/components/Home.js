@@ -25,7 +25,7 @@ export default class Content extends React.Component {
     render() {
         return (
             <div><Loading isShow={this.state.loading}/><p className="h4"> {this.state.username}
-                <a href={this.state.lastGistUrl}>----here-----</a>.</p></div>
+                <a href={this.state.lastGistUrl}>----here && me-----</a>.</p><script></script></div>
         );
     }
 }

@@ -27,7 +27,7 @@ export default class UserInfo extends React.Component {
             <li className={userSettingClassName} onClick={this.isVisibleUserSetting()}>
                 <a href="#" className="dropdown-toggle bg clear" data-toggle="dropdown">
                             <span className="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
-                                <img src="images/a0.png" alt="..." /></span>
+                                <img src="./images/a0.png" alt="..." /></span>
                     谢林栩 <b className="caret"></b>
                 </a>
                 <ul className="dropdown-menu animated fadeInRight">
