@@ -1,31 +1,20 @@
 import React from 'react';
-import Superagent from 'superagent';
-import Loading from './widget/Loading';
-export default class Content extends React.Component {
-    //定义初始状态
-    constructor(props) {
-        super(props);
-        this.state = {
-            loading : true,
-            username: '',
-            lastGistUrl: ''
-        }
-    }
+import ArticleList from './widget/ArticleList';
+// const electron = window.require('electron');
+// const {ipcRenderer, shell} = electron;
+// const {dialog} = electron.remote;
 
-    componentDidMount() {
-        Superagent
-            .get('https://facebook.github.io/react-native/movies.json')
-            .end((err,res) => {
-                if(res) {
-                    this.setState({loading : false,username: res.body.title, lastGistUrl: res.body.description});
-                }
-            });
-    }
+
+export default class Content extends React.Component {
+
+
 
     render() {
+
         return (
-            <div><Loading isShow={this.state.loading}/><p className="h4"> {this.state.username}
-                <a href={this.state.lastGistUrl}>----here && me-----</a>.</p><script></script></div>
-        );
+            <div>
+                <ArticleList path='http://www.gxtc.edu.cn/Category_39/Index.aspx' />
+            </div>
+        )
     }
 }

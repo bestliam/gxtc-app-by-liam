@@ -10,6 +10,7 @@ require('styles/App.css');
 import React from 'react';
 import Header from './Header';
 import Aside from './Aside';
+
 class AppComponent extends React.Component {
     //定义场景初始状态
     constructor(props) {

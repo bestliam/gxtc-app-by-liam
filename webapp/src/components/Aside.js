@@ -25,25 +25,27 @@ export default class Aside extends React.Component {
                                     <ul className="nav bg clearfix">
                                         <li>
                                             <NavLink to="/" onlyActiveOnIndex={true}>
-                                                <i className="fa fa-list-ul  "></i> <b
+                                                <i className="fa fa-list-ul"></i> <b
                                                 className="badge bg-danger pull-right">2</b>
                                                 <span className="font-bold">新闻</span>
                                             </NavLink>
                                         </li>
                                         <li>
                                             <NavLink to="/content">
-                                                <i className="icon-list icon   "></i>
+                                                <i className="icon-list icon"></i>
                                                 <span className="font-bold">系统</span>
                                             </NavLink>
                                         </li>
 
                                         <li>
-                                            <NavLink to="/content2">
-                                                <i className="icon-drawer icon  "></i>
+                                            <NavLink to="/error">
+                                                <i className="icon-drawer icon"></i>
                                                 <b className="badge bg-primary pull-right">6</b>
-                                                <span className="font-bold">事件</span>
+                                                <span className="font-bold">错误</span>
                                             </NavLink>
                                         </li>
+
+
 
 
                                         <li className="m-b hidden-nav-xs"></li>
